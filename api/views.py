@@ -1,10 +1,11 @@
 from django.http import JsonResponse
 
 def user(request):
+    header = {"Access-Control-Allow-Origin":"*"}
     data = { "slackUsername": 'Geewill',
-             "backend": True, 
+             "backend": True,
              "age": 22,
-              "bio": 'Godswill is a Backend developer with a proven ability to develop efficient back-end services for web applications. Experienced in Python, Django, Django REST framework.'  
+              "bio": 'Godswill is a Backend developer with a proven ability to develop efficient back-end services for web applications.'
             }
 
-    return JsonResponse(data, safe=False)
+    return JsonResponse(data, headers=header)
