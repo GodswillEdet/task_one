@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 
-def endpoint(request):
+def user(request):
     data = { "slackUsername": 'Geewill',
              "backend": True, 
              "age": 22,

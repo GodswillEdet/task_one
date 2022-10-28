@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import endpoint
+from .views import user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', endpoint, name='endpoint')
+    path('api/v1/detail', user, name='user')
 ]
